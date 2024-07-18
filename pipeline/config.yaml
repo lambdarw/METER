@@ -1,0 +1,59 @@
+openai:
+  api_key: sk-VtLIPtBhOK7oMe6r0vTdE6FyJMjbo6xYo9Kqo6Nr3bhFN6lc
+  # sk-e6N3WuGCE2ayxdo5BcYTCaDUY6MQrvQBm04JcWDaxVEHt8jc
+  # sk-usdB5q41bF8FVFN9Dc2X6RdmAMUHdwBDSX115tnARWCrXgGl
+  # api_key: sk-NyPYkrfqwptgp041vAShh9vtAbab7yfRW9PlPeAjV6jbQKcb
+  # api_key2: sk-Hej9U9wlAgEw61XW4UyL7LRnbwX90pLLJhuMi3Q5Xsi2E0VY
+  base_url: https://api.chatanywhere.tech
+  temperature: 0.2  
+  max_tokens: 1024
+gemini:
+  # GOOGLE_API_KEY: https://zrwdedomain.site/v1beta/models/gemini-pro:generateContent?key=AIzaSyA4i77be7xHr33uxVAA3vrQ71cHZsLQdE4
+  GOOGLE_API_KEY: AIzaSyA4i77be7xHr33uxVAA3vrQ71cHZsLQdE4
+  # GOOGLE_API_KEY: AIzaSyAUNfZw3U1kf_l2WOkmLD_T7NsSbJOdPM0
+  # GOOGLE_API_KEY: AIzaSyAqQfA_tHW4bHUxQtEv-ySkX9gIa7mcDvs
+  # GOOGLE_API_KEY: AIzaSyDvOn7t-mEes7WJ_4Eky45WK5l6exZZqoU
+  # GOOGLE_API_KEY: b7dac18096e5c63fa77b06f9ec22e87a557bd8c8
+tool: 
+  detect:
+    groundingdino_config: ./GroundingDINO/groundingdino/config/GroundingDINO_SwinT_OGC.py # the path of GroundingDINO_SwinT_OGC.py
+    model_path: /root/zrw/code/EasyDetect-main/pipeline/weights/groundingdino_swint_ogc.pth # the path of groundingdino_swint_ogc.pth
+    device: cuda:0
+    BOX_TRESHOLD: 0.35
+    TEXT_TRESHOLD: 0.25
+    AREA_THRESHOLD: 0.001
+  ocr:
+    dbnetpp_config: /root/zrw/code/EasyDetect-main/pipeline/mmocr/configs/textdet/dbnetpp/dbnetpp_resnet50_fpnc_1200e_icdar2015.py # the path of dbnetpp_resnet50-oclip_fpnc_1200e_icdar2015.py
+    dbnetpp_path: /root/zrw/code/EasyDetect-main/pipeline/weights/dbnetpp.pth # the path of dbnetpp.pth
+    maerec_config: /root/zrw/code/EasyDetect-main/pipeline/mmocr/configs/textrecog/maerec/maerec_b_union14m.py # the path of maerec_b_union14m.py
+    maerec_path: /root/zrw/code/EasyDetect-main/pipeline/weights/maerec_b.pth # the path of maerec_b.pth
+    device: cuda:0
+    content: word.number
+    cachefiles_path: # the path of cache_files to save temp images
+    BOX_TRESHOLD: 0.2
+    TEXT_TRESHOLD: 0.25
+  google_serper:
+    # serper_api_key: 53e1e8ca010fc26ccfc6b711c4706de8db50e3c8
+    # serper_api_key: 7a4dbad4ea1b5fc3663542d6e9c41c749142173d
+    # serper_api_key: b9777a63b89a6b6abefca9a9b4df798e7fba4c14
+    # serper_api_key: ec767f86a8094a3d16e54df5657833b97f551af6
+    # serper_api_key: 913640b39fe34a6c6df5cea4668749cc7504ec33
+    # serper_api_key: 3a75b83cb7bc6223a2442bc148ff06dc3bace870
+    serper_api_key: 7604a6334b68dbbf42ac247ac0e14caf15a89d05
+    snippet_cnt: 10
+prompts:
+  claim_generate: pipeline/prompts/claim_generate.yaml
+  query_generate: pipeline/prompts/query_generate.yaml
+  # @ Ablation-Attribute
+  # query_generate: pipeline/prompts/query_generate_ablation_object.yaml
+
+
+  verify: pipeline/prompts/verify.yaml
+  # @ Ablation-object
+  # verify: pipeline/prompts/verify_ablation_object.yaml
+  # @ Ablation-Attribute
+  # verify: pipeline/prompts/verify_ablation_att.yaml
+  # @ Ablation-text
+  # verify: pipeline/prompts/verify_ablation_text.yaml
+  # @ Ablation-fact
+  # verify: pipeline/prompts/verify_ablation_fact.yaml
