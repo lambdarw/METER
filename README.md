@@ -21,8 +21,9 @@ The framework of METER is depicted in Figure 1. We appoint mixed experts to coll
 <div align=center>
     <img src="figs/framework.png" width="600px">
 </div>
-_Figure 1: The framework of METER._
-
+<div align=center>
+Figure 1: The framework of METER.
+</div>
 
 
 ### Dataset
