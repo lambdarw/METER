@@ -20,7 +20,7 @@ All hallucinations are suitable for image-to-text and text-to-image generation t
 The framework of METER is depicted in Figure 1. We appoint mixed experts to collect evidence for hallucination, and the decision-making expert provides the final detection result and explanations.
 <div align=center>
     <img src="figs/framework.png" width="600px">
-</divr>
+</div>
 *Figure 1: The framework of METER.* 
 
 
@@ -32,6 +32,7 @@ We compared our method with benchmarks on the MHaluBench dataset,  you can downl
 ## Quick Start
 
 **Step1: Installation for tools**
+
 ```
 # install Yolo world
 pip install ultralytics==8.2.2
