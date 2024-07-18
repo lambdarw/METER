@@ -19,9 +19,10 @@ All hallucinations are suitable for image-to-text and text-to-image generation t
 ### METER Illustration
 The framework of METER is depicted in Figure 1. We appoint mixed experts to collect evidence for hallucination, and the decision-making expert provides the final detection result and explanations.
 <div align=center>
-<img src="figs/framework.png" width="600px">
-*Figure 1: The framework of METER.* 
+    <img src="figs/framework.png" width="600px">
 </divr>
+*Figure 1: The framework of METER.* 
+
 
 
 ### Dataset
