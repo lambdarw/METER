@@ -8,32 +8,29 @@
 METER is a multimodal hallucination detection method guided by the chain of thought, which incorporates domain knowledge to address semantic duality and enhance model inference. You can easily use it for Large Vision-Language Models (LVLMs) in your research experiments. 
 
 ### Preliminaries
-
 METER is supposed to detect the hallucinations on in four categories: 
-
 1) **Object Hallucination** refers to a misperceived presence of objects in an image or conflicts between objects depicted in an image and their corresponding textual descriptions. 
 2) **Attribute Hallucination** occurs when the LVLM generates incorrect attribute information or inaccurately describes objects' attributes in an image, such as positions, colors, and actions. 
 3) **Scene-Text Hallucination** involves incorrect generation or recognition of text found in various real-world contexts, such as books, signs, banners, and product descriptions.
 4) **Factuality Hallucination** refers to the generation of images or text that contradict established real-world knowledge, violate common sense, or conflict with factual information.
-
 All hallucinations are suitable for image-to-text and text-to-image generation tasks.
 
+
 ### METER Illustration
-
 The framework of METER is depicted in Figure 1. We appoint mixed experts to collect evidence for hallucination, and the decision-making expert provides the final detection result and explanations.
-
+<div align=center>
 <img src="figs/framework.png" width="600px">
-
 *Figure 1: The framework of METER.* 
+</divr>
+
 
 ### Dataset
-
 We compared our method with benchmarks on the MHaluBench dataset,  you can download it from https://huggingface.co/datasets/openkg/MHaluBench.
+
 
 ## Quick Start
 
 **Step1: Installation for tools**
-
 ```
 # install Yolo world
 pip install ultralytics==8.2.2
@@ -76,9 +73,7 @@ https://github.com/Mountchicken/Union14M/releases/download/Checkpoint/maerec_b_u
 ```
 
 **Step2: Write a configuration file in yaml format**
-
 Users can easily configure the parameters of METER in a yaml file. 
-
 The path of the configuration file is EasyDetect/pipeline/config/config.yaml
 
 ```yaml
@@ -116,15 +111,12 @@ prompts:
 ```
 
 **Step3: Run with the code**
-
 ```python
 python METER.py
 ```
 
 ## Citation
-
 Please cite our repository if you use METER in your work.
-
 ```bibtex
 
 ```
