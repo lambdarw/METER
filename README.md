@@ -27,7 +27,7 @@ Figure 1: The framework of METER.
 
 
 ### Dataset
-We compared our method with benchmarks on the MHaluBench dataset,  you can download it from https://huggingface.co/datasets/openkg/MHaluBench.
+We compared our method with benchmarks on the [MHaluBench][https://huggingface.co/datasets/openkg/MHaluBench] dataset.
 
 
 ## Quick Start
