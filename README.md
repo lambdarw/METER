@@ -121,5 +121,20 @@ python METER.py
 ## Citation
 Please cite our repository if you use METER in your work.
 ```bibtex
-
+    @InProceedings{10.1007/978-981-97-9443-0_24,
+    author="Zhang, Ruwen
+    and Chen, Jinglu
+    and Dai, Mingjie
+    and Jiang, Xinyi
+    and Hu, Yuxin
+    and Liu, Bo
+    and Cao, Jiuxin",
+    title="METER: Multimodal Hallucination Detection with Mixture of Experts via Tools Ensembling and Reasoning",
+    booktitle="Natural Language Processing and Chinese Computing",
+    year="2025",
+    publisher="Springer Nature Singapore",
+    address="Singapore",
+    pages="274--286",
+    isbn="978-981-97-9443-0"
+    }
 ```
